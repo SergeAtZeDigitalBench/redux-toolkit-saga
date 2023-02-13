@@ -1,10 +1,15 @@
-import React from 'react';
-import { Container, Typography } from '@mui/material';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Container } from "@mui/material";
+
+import PostsPage from "./pages/PostsPage";
 
 function App() {
   return (
     <Container>
-      <Typography variant='h3' component="h1"  sx={{bgcolor: theme=>theme.palette.success.light, textAlign: 'center'}}>RTK Saga</Typography>
+      <Routes>
+        <Route path="/" element={<PostsPage />} />
+      </Routes>
     </Container>
   );
 }
